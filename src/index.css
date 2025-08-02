@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/fonts/PetitCochon.ttf") format("truetype");
+  font-weight: normal; /* Add bold if necessary */
+  font-style: normal; /* Add italic if necessary */
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #10a605;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  @apply font-body text-gray-800; /* Use Roboto for body */
+  background-color: #fffaf2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading; /* Use Quicksand for headings */
+  color: #495057;
+}
+/* Equivalent to sm */
+/* @media (min-width: 40rem) {
+ 
+} */
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* heading for card section */
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem; /* Corresponds to "text-lg" */
+  font-weight: 700; /* Corresponds to "font-bold" */
+  /* color: #047857; Corresponds to "text-emerald-700" */
+}
+
+h4 {
+  font-size: 1rem; /* 18px */
+  font-weight: 600; /* Semibold */
+}
+
+footer,
+header {
+  background-color: #fff0de;
+  color: #495057;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #acd980;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #6c9f39;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.react-calendar {
+  background-color: #fff0de; /* Calm Blue */
+  color: #495057; /* Charcoal Gray for text */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.react-calendar__tile {
+  background-color: transparent;
+  color: #495057; /* Charcoal Gray */
+  border-radius: 0.25rem; /* Rounded day tiles */
+  transition: background-color 0.3s ease;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #fff0de;
+  color: #acd980;
+}
+
+.react-calendar__tile--active {
+  background-color: #fff0de;
+  color: #acd980;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  gap: 0.5rem; /* Add spacing between the buttons if needed */
+}
+.react-calendar__navigation button {
+  color: #495057; /* Charcoal Gray for navigation arrows */
+  background-color: #fff0de; /* Calm Blue */
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+}
+
+.react-calendar__tile--now {
+  color: #107f39;
+}
+abbr:where([title]) {
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #107f39;
+  }
+
+  .svg:hover {
+    filter: invert(21%) sepia(77%) saturate(2480%) hue-rotate(135deg)
+      brightness(102%) contrast(87%);
+  }
+
+  .svghover {
+    filter: invert(21%) sepia(77%) saturate(2480%) hue-rotate(135deg)
+      brightness(102%) contrast(87%);
+  }
+}
